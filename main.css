@@ -490,3 +490,34 @@
     }
 
 }
+
+.media{
+    
+    display: flex;
+    flex-direction: column;
+    
+    margin-top: 60px;
+}
+
+.media_video{
+    width: 100%;
+    border: 10px solid #6D3D99;
+    padding: 70px;
+}
+
+.media_audio{
+    display: flex;
+    justify-content: center;
+}
+
+.media_audio_aud{
+    border: 10px solid #6D3D99;
+}
+
+.media_h{
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #FFC740;
+}
+
