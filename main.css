@@ -430,3 +430,63 @@
         height: 90px;
     }
 }
+
+
+.animation{
+    margin-top: 150px;
+}
+
+.animation_button_1{
+    display: block;
+    position: relative;
+    width: 130px;
+    height: 40px;
+
+    animation-name: animation_1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes animation_1 {
+    0%{
+        left:0px;
+    }
+
+    100%{
+        left: 300px;
+    }
+}
+
+.animation_button_2{
+    display: block;
+    width: 130px;
+    height: 40px;
+    transition-duration: 3s;
+    border: none;
+}
+
+.animation_button_2:hover{
+    background-color: #FFC740;
+    color: white;
+
+}
+
+.animation_image{
+    margin-top: 20px;
+    animation: animation_3 infinite 20s linear;
+    animation-duration: 9s;
+    height: 100px;
+
+}
+
+
+@keyframes animation_3 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg); 
+    }
+
+}
