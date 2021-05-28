@@ -3,9 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>My First SASS Project</title>
-    <link rel="stylesheet" href="style/style.css">
+    
   </head>
   <body>
+    
+
     <header>
         <div class="head_navigation">
             <div class="head_navigation_logo">
@@ -37,12 +39,16 @@
 
 
     <div class="main_image">
-        <img class="main_image_img" src="image/koz.png">
-        <div class="main_image_text">
-            <h3>Aliquam pharetra vulputate</h3>
-            <p>Vivamus est mauris, sollicitudin ut ipsum pharetra, porta rutrum turpis. Suspendisse sollicitudin quam eget condimentum posuere. In auctor vel mi porta commodo. Vestibulum mattis fringilla tempus. Etiam eu consectetur nisi. Aenean blandit sodales euismod. In hac habitasse platea dictumst. </p>
-            <button>READ MORE</button>
-        </div>
+        <img id="image_1" class="main_image_img" src="image/koz.png">
+        <img id="image_2" style="display: none;" class="main_image_img" src="image/image_2.png">
+        <img id="image_3" style="display: none;" class="main_image_img" src="image/image_3.png">
+        
+    </div>
+
+    <div class="slider_button">
+        <input checked="checked" type="radio" onclick="next(1)" name="pol">
+        <input type="radio" onclick="next(2)" name="pol">
+        <input type="radio" onclick="next(3)" name="pol">
     </div>
 
 
@@ -56,7 +62,7 @@
 
             <div class="container_content_bottom">
                 <div class="container_content_bottom_image">
-                    <img src="image/dog.PNG">
+                    <img src="image/dog.png">
                 </div>
                 
                 <div class="container_content_bottom_text">
@@ -78,7 +84,7 @@
 
             <div class="container_content_bottom">
                 <div class="container_content_bottom_image">
-                    <img src="image/steve.PNG">
+                    <img src="image/steve.png">
                 </div>
                 
                 <div class="container_content_bottom_text">
@@ -101,7 +107,7 @@
 
             <div class="container_content_bottom">
                 <div class="container_content_bottom_image">
-                    <img src="image/limur.PNG">
+                    <img src="image/limur.png">
                 </div>
                 
                 <div class="container_content_bottom_text">
@@ -123,7 +129,7 @@
 
             <div class="container_content_bottom">
                 <div class="container_content_bottom_image">
-                    <img src="image/girl.PNG">
+                    <img src="image/girl.png">
                 </div>
                 
                 <div class="container_content_bottom_text">
@@ -161,7 +167,7 @@
 
             <div class="container_two_content_reset_bottom">
                 <div class="container_two_content_bottom_image">
-                    <img src="image/car.PNG">
+                    <img src="image/car.png">
                 </div>
 
 
@@ -173,7 +179,7 @@
             </div>
             <div class="container_two_content_reset_bottom">
                 <div class="container_two_content_bottom_image">
-                    <img src="image/phone.PNG">
+                    <img src="image/phone.png">
                 </div>
 
 
@@ -186,7 +192,7 @@
             
             <div class="container_two_content_reset_bottom">
                 <div class="container_two_content_bottom_image">
-                    <img src="image/bbc.PNG">
+                    <img src="image/bbc.png">
                 </div>
 
 
@@ -223,11 +229,11 @@
         </div>
 
         <div class="clents_image">
-            <img src="image/html6.PNG">
-            <img src="image/html5.PNG">
-            <img src="image/node.PNG">
-            <img src="image/php.PNG">
-            <img src="image/sql.PNG">
+            <img src="image/html6.png">
+            <img src="image/html5.png">
+            <img src="image/node.png">
+            <img src="image/php.png">
+            <img src="image/sql.png">
         </div>
 
     </div>

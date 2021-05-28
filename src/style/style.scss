@@ -118,15 +118,20 @@ nav{
 
     }
 
+    
+
     .container_content_bottom{
         display: flex;
         margin-top: 16px;
+
+        
 
         .container_content_bottom_image{
 
             margin-right: 20px;
             
             img{
+             
                 max-width: 156px;
                 height: 130px;
                 border: 2px solid $orange_color;
@@ -278,6 +283,7 @@ nav{
 .main_image {
     background-color: black;
     position: relative;
+    z-index: 1;
 
 
     .main_image_img{
