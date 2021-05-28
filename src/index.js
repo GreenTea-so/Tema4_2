@@ -1,0 +1,17 @@
+import './style/scss/scss.scss';
+import './image/koz.png';
+import './image/dog.png';
+import './image/steve.png';
+import './image/limur.png';
+import './image/girl.png';
+import './image/car.png';
+import './image/phone.png';
+import './image/bbc.png';
+import './image/html5.png';
+import './image/html6.png';
+import './image/node.png';
+import './image/php.png';
+import './image/sql.png';
+import './image/image_2.png';
+import './image/image_3.png';
+import './script.js';
