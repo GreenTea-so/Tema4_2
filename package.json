@@ -6,13 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
-    "dev": "webpack"
+    "dev": "webpack",
+    "start_lint": "cd node_modules/.bin && eslint ../../src/script.js --fix && eslint ../../src/index.js --fix"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.6",
+    "eslint": "^7.27.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
     "node-sass": "^6.0.0",
@@ -21,5 +23,8 @@
     "webpack": "^5.38.0",
     "webpack-cli": "^4.7.0",
     "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "eslint-config-airbnb": "^18.2.1"
   }
 }
