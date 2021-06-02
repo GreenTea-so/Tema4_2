@@ -1,8 +1,5 @@
+udo: false
+
 language: node_js
 node_js:
-  - 7
-
-before_install:
-  - npm i
-
-script: start_lint
+  - 9
