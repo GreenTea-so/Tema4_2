@@ -1,9 +1,7 @@
 sudo: false
-
 language: node_js
 node_js:
-  - 9
+  - node
 
-branches:
-  only:
-    - ci
+install:
+  - npm run start_lint
