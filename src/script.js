@@ -3,6 +3,8 @@ function next(n) {
   const image2 = document.getElementById('image_2');
   const image3 = document.getElementById('image_3');
 
+  
+
   if (n === 1) {
     image1.style.display = 'block';
     image2.style.display = 'none';
