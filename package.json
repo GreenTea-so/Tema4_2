@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
     "dev": "webpack",
-    "start_lint": "cd node_modules/.bin && eslint ../../src/script.js --fix && eslint ../../src/index.js --fix"
+    "start_lint": "cd node_modules/.bin && eslint ../../src/script.js --fix"
   },
   "author": "",
   "license": "ISC",
