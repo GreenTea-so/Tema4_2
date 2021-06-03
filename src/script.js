@@ -20,5 +20,4 @@ function next(n) {
   }
 }
 
-
 window.next = next;
