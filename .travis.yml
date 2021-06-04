@@ -5,3 +5,9 @@ node_js:
 
 install:
   - npm run start_lint
+
+os:
+  - osx
+
+  
+  
