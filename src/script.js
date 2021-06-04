@@ -27,12 +27,9 @@ async function getResponse() {
 
   const request = await fetch(requestURL);
   const content = await request.json();
-  console.log(request);
-  console.log(content);
 
   const parentClass = document.getElementsByClassName('container');
   const parent = parentClass[0];
-  console.log(parent);
 
   let yellowColor;
 
