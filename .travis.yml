@@ -9,5 +9,12 @@ script:
 os:
   - osx
 
+deploy:
+  provider: psges
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  on:
+    branch: gh-pages
+
   
   
