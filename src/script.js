@@ -22,41 +22,29 @@ function next(n) {
 
 window.next = next;
 
+async function getResponse() {
+  const requestURL = 'https://baconipsum.com/api/?type=all-meat&paras=12&sta..';
 
+  const request = await fetch(requestURL);
+  const content = await request.json();
 
+  const parentClass = document.getElementsByClassName('container');
+  const parent = parentClass[0];
 
-async function getResponse(){
-  const requestURL = 'https://baconipsum.com/api/?type=all-meat&paras=12&sta..'
-  
-  const request = await fetch(requestURL)
-  const content = await request.json()
-  console.log(request)
-  console.log(content)
+  let yellowColor;
 
-  const parent_class = document.getElementsByClassName('container')
-  const parent = parent_class[0]
-  console.log(parent)
-
-  let yellow_color = "yellow_block"
-  
-
-  for(let i = 0; i < content.length; i += 1) {
-    if (i % 2 === 0 ) {
-      yellow_color = ""
-      
+  for (let i = 0; i < content.length; i += 1) {
+    if (i % 2 === 0) {
+      yellowColor = '';
+    } else {
+      yellowColor = 'yellow_block';
     }
-    else {
-      yellow_color = "yellow_block"
-      
-    }
-    const element = document.createElement('div')
+    const element = document.createElement('div');
     element.classList.add('container_content');
-    element.style.marginRight = '20px'
-    element.innerHTML = "<div class=\"container_content_top\"><div class=\"container_content_top_square " + yellow_color + "\"></div><h6>ABOUT SUPER LOGO</h6><div class=\"container_content_top_rectangle  " + yellow_color + "\"></div></div><div class=\"container_content_bottom\"><div class=\"container_content_bottom_image\"><img src=\"https://picsum.photos/148/138?random=" + i + "\"></div><div class=\"container_content_bottom_text\"><p>" + content[i] + "</p><a>Read more...</a></div></div>"
-    parent.appendChild(element)
+    element.style.marginRight = '20px';
+    element.innerHTML = `<div class="container_content_top"><div class="container_content_top_square ${yellowColor}"></div><h6>ABOUT SUPER LOGO</h6><div class="container_content_top_rectangle  ${yellowColor}"></div></div><div class="container_content_bottom"><div class="container_content_bottom_image"><img src="https://picsum.photos/148/138?random=${i}"></div><div class="container_content_bottom_text"><p>${content[i]}</p><a>Read more...</a></div></div>`;
+    parent.appendChild(element);
   }
-  
 }
-  
-document.addEventListener("DOMContentLoaded", getResponse);
- 
+
+document.addEventListener('DOMContentLoaded', getResponse);

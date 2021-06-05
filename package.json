@@ -7,7 +7,7 @@
     "test": "cd node_modules/.bin && eslint ../../src/script.js",
     "start": "webpack serve --open",
     "dev": "webpack",
-    "start_lint": "cd node_modules/.bin && eslint ../../src/script.js"
+    "start_lint": "cd node_modules/.bin && eslint ../../src/script.js --fix"
   },
   "author": "",
   "license": "ISC",
@@ -18,6 +18,7 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
     "node-sass": "^6.0.0",
+    "react": "^17.0.2",
     "sass-loader": "^11.1.1",
     "style-loader": "^2.0.0",
     "webpack": "^5.38.0",
