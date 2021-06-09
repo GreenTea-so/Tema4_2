@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My First SASS Project</title>
+    
+  <script defer src="main.js"></script></head>
+  <body>
+    
+
+    <header>
+        <div class="head_navigation">
+            <div class="head_navigation_logo">
+                
+                <div class="head_navigation_logo_block"></div>
+                <h1>SUPER LOGO</h1>
+                
+            </div>
+
+            <div class="head_navigation_interfase">
+                <input>
+                <button>GO</button>
+            </div>
+        </div>
+
+        <nav>
+            <button>HOME</button>
+            <button>ABOUT US</button>
+            <button>SERVICE</button>
+            <button>PARTNER</button>
+            <button>CUSTOMERS</button>
+            <button>PROJECT</button>
+            <button>CAREERS</button>
+            <button style="min-width: 100px;">CONTACT</button>
+        </nav>
+    </header>
+
+
+
+
+    <div class="main_image">
+        <img id="image_1" class="main_image_img" src="image/koz.png">
+        <img id="image_2" style="display: none;" class="main_image_img" src="image/image_2.png">
+        <img id="image_3" style="display: none;" class="main_image_img" src="image/image_3.png">
+        
+    </div>
+
+    <div class="slider_button">
+        <input checked="checked" type="radio" onclick="next(1)" name="pol">
+        <input type="radio" onclick="next(2)" name="pol">
+        <input type="radio" onclick="next(3)" name="pol">
+    </div>
+
+
+    <div class="container">
+        <div class="container_content">
+            <div class="container_content_top">
+                <div class="container_content_top_square"></div>
+                <h6>ABOUT SUPER LOGO</h6>
+                <div class="container_content_top_rectangle"></div>
+            </div>
+
+            <div class="container_content_bottom">
+                <div class="container_content_bottom_image">
+                    <img src="image/dog.png">
+                </div>
+                
+                <div class="container_content_bottom_text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam massa, dignissim at nisi nec, iaculis molestie leo. Aenean hendrerit pretium enim quis rutrum. Pellentesque mattis sem a efficitur auctor. Sed vulputate vitae dui non fermentum. Donec non sem dignissim, tincidunt arcu eget, posuere tellus. Quisque consectetur diam id faucibus sagittis. Praesent placerat, diam non sollicitudin suscipit, eros erat</p>
+                    <a>Read more...</a>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="container_content">
+            <div class="container_content_top">
+                <div class="container_content_top_square yellow_block"></div>
+                <h6 style="min-width: 170px;">SOME WORDS OUR CEO</h6>
+                <div class="container_content_top_rectangle yellow_block"></div>
+            </div>
+
+            <div class="container_content_bottom">
+                <div class="container_content_bottom_image">
+                    <img src="image/steve.png">
+                </div>
+                
+                <div class="container_content_bottom_text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam massa, dignissim at nisi nec, iaculis molestie leo. Aenean hendrerit pretium enim quis rutrum. Pellentesque mattis sem a efficitur auctor. Sed vulputate vitae dui non fermentum. Donec non sem dignissim, tincidunt arcu eget, posuere tellus. Quisque consectetur diam id faucibus sagittis. Praesent placerat, diam non sollicitudin suscipit, eros erat</p>
+                    <a style="text-decoration: none;">Steve Jobs, CEO</a>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="container_content">
+            <div class="container_content_top">
+                <div class="container_content_top_square yellow_block"></div>
+                <h6>ABOUT SUPER LOGO</h6>
+                <div class="container_content_top_rectangle yellow_block"></div>
+            </div>
+
+            <div class="container_content_bottom">
+                <div class="container_content_bottom_image">
+                    <img src="image/limur.png">
+                </div>
+                
+                <div class="container_content_bottom_text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam massa, dignissim at nisi nec, iaculis molestie leo. Aenean hendrerit pretium enim quis rutrum. Pellentesque mattis sem a efficitur auctor. Sed vulputate vitae dui non fermentum. Donec non sem dignissim, tincidunt arcu eget, posuere tellus. Quisque consectetur diam id faucibus sagittis. Praesent placerat, diam non sollicitudin suscipit, eros erat</p>
+                    <a>Read more...</a>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="container_content">
+            <div class="container_content_top">
+                <div class="container_content_top_square" ></div>
+                <h6 style="min-width: 170px;">SOME WORDS OUR CEO</h6>
+                <div class="container_content_top_rectangle" ></div>
+            </div>
+
+            <div class="container_content_bottom">
+                <div class="container_content_bottom_image">
+                    <img src="image/girl.png">
+                </div>
+                
+                <div class="container_content_bottom_text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam massa, dignissim at nisi nec, iaculis molestie leo. Aenean hendrerit pretium enim quis rutrum. Pellentesque mattis sem a efficitur auctor. Sed vulputate vitae dui non fermentum. Donec non sem dignissim, tincidunt arcu eget, posuere tellus. Quisque consectetur diam id faucibus sagittis. Praesent placerat, diam non sollicitudin suscipit, eros erat</p>
+                    <a style="text-decoration: none;">Steve Jobs, CEO</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container_two">
+        <div class="container_two_content">
+            <div class="container_two_content_top">
+                <div class="container_content_top_square" style="background-color: #FFC740;"></div>
+                <h6>SERVICES</h6>
+                <div class="container_content_top_rectangle" style="background-color: #FFC740;"></div>
+            
+            </div>
+
+            <div class="container_two_content_bottom">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam massa, dignissim at nisi nec, iaculis molestie leo. Aenean hendrerit pretium enim quis rutrum. Pellentesque mattis sem a efficitur auctor. Sed vulputate vitae dui non fermentum. Donec non sem dignissim, tincidunt arcu eget, posuere tellus. Quisque consectetur diam id faucibus sagittis. Praesent placerat, diam non sollicitudin suscipit, eros erat</p>
+                <a>Read more...</a>
+            </div>
+        </div>
+
+        <div class="container_two_content" >
+            <div class="container_two_content_top">
+                <div class="container_content_top_square"></div>
+                <h6 style="min-width: 80px;">RESENT POSTS</h6>
+                <div class="container_content_top_rectangle"></div>
+            
+            </div>
+
+            <div class="container_two_content_reset_bottom">
+                <div class="container_two_content_bottom_image">
+                    <img src="image/car.png">
+                </div>
+
+
+                <div class="container_two_content_bottom_text">
+                    <p>LOREM IPSUM</p>
+                    <p>Aenean hendrerit pretium enim quis rutrum. Pellentesque mattis sem a efficitur auctor.</p>
+                </div>
+
+            </div>
+            <div class="container_two_content_reset_bottom">
+                <div class="container_two_content_bottom_image">
+                    <img src="image/phone.png">
+                </div>
+
+
+                <div class="container_two_content_bottom_text">
+                    <p>LOREM IPSUM</p>
+                    <p>Aenean hendrerit pretium enim quis rutrum. Pellentesque mattis sem a efficitur auctor.</p>
+                </div>
+
+            </div>
+            
+            <div class="container_two_content_reset_bottom">
+                <div class="container_two_content_bottom_image">
+                    <img src="image/bbc.png">
+                </div>
+
+
+                <div class="container_two_content_bottom_text">
+                    <p>LOREM IPSUM</p>
+                    <p>Aenean hendrerit pretium enim quis rutrum. Pellentesque mattis sem a efficitur auctor.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container_two_content">
+            <div class="container_two_content_top">
+                <div class="container_content_top_square" style="background-color: #FFC740;"></div>
+                <h6>SERVICES</h6>
+                <div class="container_content_top_rectangle" style="background-color: #FFC740;"></div>
+            
+            </div>
+
+            <div class="container_two_content_bottom">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam massa, dignissim at nisi nec, iaculis molestie leo. Aenean hendrerit pretium enim quis rutrum. Pellentesque mattis sem a efficitur auctor. Sed vulputate vitae dui non fermentum. Donec non sem dignissim, tincidunt arcu eget, posuere tellus. Quisque consectetur diam id faucibus sagittis. Praesent placerat, diam non sollicitudin suscipit, eros erat</p>
+                <a>Read more...</a>
+            </div>
+            
+        </div>
+
+    </div>
+
+    <div class="clents">
+        <div class="clents_top">
+            <div class="container_content_top_square"></div>
+            <h6>CLENTS</h6>
+            <div class="container_content_top_rectangle"></div>
+        </div>
+
+        <div class="clents_image">
+            <img src="image/html6.png">
+            <img src="image/html5.png">
+            <img src="image/node.png">
+            <img src="image/php.png">
+            <img src="image/sql.png">
+        </div>
+
+    </div>
+
+
+    
+
+       
+
+  </body>
+</html>
