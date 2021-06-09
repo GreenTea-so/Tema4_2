@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 function next(n) {
   const image1 = document.getElementById('image_1');
   const image2 = document.getElementById('image_2');
@@ -22,29 +24,57 @@ function next(n) {
 
 window.next = next;
 
-async function getResponse() {
-  const requestURL = 'https://baconipsum.com/api/?type=all-meat&paras=12&sta..';
+function getResponse(quantityContent) {
+ 
+  const promiseBekon = axios.get('https://baconipsum.com/api/', {
+    params: {
+      type: 'all-meat',
+      paras: quantityContent
 
-  const request = await fetch(requestURL);
-  const content = await request.json();
-
-  const parentClass = document.getElementsByClassName('container');
-  const parent = parentClass[0];
-
-  let yellowColor;
-
-  for (let i = 0; i < content.length; i += 1) {
-    if (i % 2 === 0) {
-      yellowColor = '';
-    } else {
-      yellowColor = 'yellow_block';
     }
-    const element = document.createElement('div');
-    element.classList.add('container_content');
-    element.style.marginRight = '20px';
-    element.innerHTML = `<div class="container_content_top"><div class="container_content_top_square ${yellowColor}"></div><h6>ABOUT SUPER LOGO</h6><div class="container_content_top_rectangle  ${yellowColor}"></div></div><div class="container_content_bottom"><div class="container_content_bottom_image"><img src="https://picsum.photos/148/138?random=${i}"></div><div class="container_content_bottom_text"><p>${content[i]}</p><a>Read more...</a></div></div>`;
-    parent.appendChild(element);
+  });
+
+  const promisePicsum = axios.get('https://picsum.photos/v2/list', {
+      params: {
+        limit: quantityContent,
+        width: 100
+      }
+  });
+  
+  Promise.all([promiseBekon, promisePicsum]).then((response) => {
+    console.log(response)
+    const contentBekon = response[0].data
+    const contentPicsum = response[1].data
+    console.log('content',contentPicsum)
+    console.log(contentPicsum[0].url)
+    
+    
+    
+    const parentClass = document.getElementsByClassName('container');
+    const parent = parentClass[0];
+
+    let yellowColor;
+
+    for (let i = 0; i < quantityContent; i += 1) {
+      if (i % 2 === 0) {
+        yellowColor = '';
+      } else {
+        yellowColor = 'yellow_block';
+      }
+      const element = document.createElement('div');
+      element.classList.add('container_content');
+      element.style.marginRight = '20px';
+      element.innerHTML = `<div class="container_content_top"><div class="container_content_top_square ${yellowColor}"></div><h6>ABOUT SUPER LOGO</h6><div class="container_content_top_rectangle  ${yellowColor}"></div></div><div class="container_content_bottom"><div class="container_content_bottom_image"><img src="${contentPicsum[i].download_url}"></div><div class="container_content_bottom_text"><p>${contentBekon[i]}</p><a>Read more...</a></div></div>`;
+      parent.appendChild(element);
   }
+  });
+
+
+  
+  
+  
+
+  
 }
 
-document.addEventListener('DOMContentLoaded', getResponse);
+document.addEventListener('DOMContentLoaded', getResponse(12));

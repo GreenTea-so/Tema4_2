@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "axios": "^0.21.1",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.6",
     "eslint": "^7.27.0",
