@@ -24,8 +24,8 @@ function next(n) {
 
 window.next = next;
 
-function getResponse(quantityContent) {
-  const promiseBekon = axios.get('https://baconipsum.com/api/', {
+async function getResponse(quantityContent) {
+  const promiseBekon = await axios.get('https://baconipsum.com/api/', {
     params: {
       type: 'all-meat',
       paras: quantityContent,
@@ -33,35 +33,33 @@ function getResponse(quantityContent) {
     },
   });
 
-  const promisePicsum = axios.get('https://picsum.photos/v2/list', {
+  const promisePicsum = await axios.get('https://picsum.photos/v2/list', {
     params: {
       limit: quantityContent,
       width: 100,
     },
   });
 
-  Promise.all([promiseBekon, promisePicsum]).then((response) => {
-    const contentBekon = response[0].data;
-    const contentPicsum = response[1].data;
+  const contentBekon = promiseBekon.data;
+  const contentPicsum = promisePicsum.data;
 
-    const parentClass = document.getElementsByClassName('container');
-    const parent = parentClass[0];
+  const parentClass = document.getElementsByClassName('container');
+  const parent = parentClass[0];
 
-    let yellowColor;
+  let yellowColor;
 
-    for (let i = 0; i < quantityContent; i += 1) {
-      if (i % 2 === 0) {
-        yellowColor = '';
-      } else {
-        yellowColor = 'yellow_block';
-      }
-      const element = document.createElement('div');
-      element.classList.add('container_content');
-      element.style.marginRight = '20px';
-      element.innerHTML = `<div class="container_content_top"><div class="container_content_top_square ${yellowColor}"></div><h6>ABOUT SUPER LOGO</h6><div class="container_content_top_rectangle  ${yellowColor}"></div></div><div class="container_content_bottom"><div class="container_content_bottom_image"><img src="${contentPicsum[i].download_url}"></div><div class="container_content_bottom_text"><p>${contentBekon[i]}</p><a>Read more...</a></div></div>`;
-      parent.appendChild(element);
+  for (let i = 0; i < quantityContent; i += 1) {
+    if (i % 2 === 0) {
+      yellowColor = '';
+    } else {
+      yellowColor = 'yellow_block';
     }
-  });
+    const element = document.createElement('div');
+    element.classList.add('container_content');
+    element.style.marginRight = '20px';
+    element.innerHTML = `<div class="container_content_top"><div class="container_content_top_square ${yellowColor}"></div><h6>ABOUT SUPER LOGO</h6><div class="container_content_top_rectangle  ${yellowColor}"></div></div><div class="container_content_bottom"><div class="container_content_bottom_image"><img src="${contentPicsum[i].download_url}"></div><div class="container_content_bottom_text"><p>${contentBekon[i]}</p><a>Read more...</a></div></div>`;
+    parent.appendChild(element);
+  }
 }
 
 document.addEventListener('DOMContentLoaded', getResponse(12));
